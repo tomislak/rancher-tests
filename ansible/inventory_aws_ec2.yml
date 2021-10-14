@@ -1,0 +1,12 @@
+plugin: aws_ec2
+
+regions:
+  - "eu-central-1"
+
+keyed_groups:
+  - key: tags.Name
+  - key: tags.Project
+  - key: tags.Environment
+
+compose:
+  ansible_host: public_ip_address
